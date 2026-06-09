@@ -1,0 +1,199 @@
+/* ヘッダーツールバー内に挿入される表ボタンのスタイル */
+.loilo-table-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loilo-table-injected-btn {
+  width: 40px; /* 他のアイコンボタンに近いサイズ */
+  height: 40px;
+  border-radius: 4px; /* ロイロのヘッダーボタンは少し角丸 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto !important;
+  z-index: 100;
+  transition: background-color 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.loilo-table-injected-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.loilo-table-injected-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.loilo-table-btn-label {
+  font-size: 9px;
+  color: white;
+  font-weight: bold;
+  margin-top: -2px;
+  line-height: 1;
+}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: sans-serif;
+}
+
+
+.loilo-table-modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.loilo-table-modal-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loilo-table-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.loilo-table-config {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.loilo-table-config label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.loilo-table-config input {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#loilo-total-width {
+  width: 80px;
+}
+
+.loilo-table-grid th {
+  background-color: #f0f0f0;
+}
+
+.loilo-col-width-label {
+  font-size: 11px;
+  color: #888;
+  display: block;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.loilo-table-grid input.loilo-col-width-input {
+  background-color: #fff9e6;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px;
+  border-bottom: 1px dashed #ffcc00;
+}
+
+.loilo-table-editor {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.loilo-table-grid {
+  border-collapse: collapse;
+  table-layout: fixed; /* 幅を固定するために必要 */
+  width: 100%;
+}
+
+.loilo-table-grid th {
+  position: relative; /* リサイザーの基準点 */
+  background-color: #f0f0f0;
+}
+
+/* リサイザー（ハンドル）のスタイル */
+.loilo-resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  user-select: none;
+  z-index: 1;
+}
+
+.loilo-resizer:hover, .loilo-resizer.resizing {
+  background-color: #4a90e2;
+  width: 2px;
+}
+
+.loilo-table-grid input {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* 不要になった比率入力用のスタイルを削除または非表示に */
+.loilo-col-width-label, .loilo-col-width-input {
+  display: none !important;
+}
+
+.loilo-table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.loilo-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.loilo-btn-cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.loilo-btn-insert {
+  background: #007aff;
+  color: white;
+}
+
+.loilo-btn:hover {
+  opacity: 0.9;
+}

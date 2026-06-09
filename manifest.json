@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ロイロノート 表挿入ツール",
+  "version": "1.0",
+  "description": "ロイロノートのテキストカードに表を挿入します。",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://loilonote.app/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
